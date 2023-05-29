@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /site/include/
+Disallow: /site/PHPMailler/
+
+Allow: /site/index.php
+Allow: /site/assets/
+Allow: /site/assets/css/
+Allow: /site/assets/css/global.css
+Allow: /site/assets/css/hamburger.css
+Allow: /site/assets/css/mobile.css
+Allow: /site/assets/css/style.css
+Allow: /site/assets/images/
+Allow: /site/assets/images/icon/
+Allow: /site/assets/images/products/
+Allow: /site/assets/images/ref/
+Allow: /site/assets/images/svg/
+Allow: /site/assets/scripts/
+Allow: /site/assets/scripts/app.js
+Allow: /site/pages/
+Allow: /site/pages/about.php
+Allow: /site/pages/contact.php
+Allow: /site/pages/form.php
+Allow: /site/pages/landing.php
+Allow: /site/pages/products.php
+Allow: /site/pages/references.php

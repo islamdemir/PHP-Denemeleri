@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #e7e7e7;
+}
+
+i {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+a {
+    color: #000000;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* Button */
+.button {
+    color: #66BE45;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #66BE45 20%, #b8e356 80%);
+    text-decoration: underline;
+    font-size: 24px;
+    color: #ffffff;
+    border-radius: 6px;
+    animation: changeSize 1s alternate;
+}
+
+.basket:hover,
+.account:hover {
+    cursor: pointer;
+}
+
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#topButton:hover {
+    background-color: #555;
+}
+
+
+/* Button end */
+/* border */
+.border {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    width: 296px;
+    /* height: 35px; */
+    border-radius: 11px;
+    padding: 0.6rem;
+    margin: 0.3rem;
+}
+
+.border:focus {
+    outline: 1px solid #66BE45;
+}
+
+/* border end */
+/* Animation */
+
+@keyframes glade {
+    0% {
+        transform: translateX(-800px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes changeSize {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation end */

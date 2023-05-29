@@ -1,0 +1,70 @@
+* {
+    --height: 3px;
+    /* Değişken olarak yükseklik tanımlıyoruz. İleride boyutunu ayarlamak için kullanılacaktır.*/
+    --space: calc(var(--height) * 2.5);
+    /* Genişlik için değişken tanımladık. Yükseklik 10px ise; 2.5x10=25px sonuc çıkar.
+    Yükseklik değiştirildiğinde genişlik ona göre otomatik hesaplanır. */
+    --animation-speed: 300ms;
+}
+
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    width: calc(var(--space) * 4);
+    /* Yukarıda tanımladığız değişkene göre 25px*4=100px sonucunu üretir. */
+    height: calc(var(--height) + (var(--space) * 2));
+    /* Yukarıdaki değişkenin yükseklik + space değişkeni * 2= 60px sonucunu üretir. */
+    /* ===== */
+    /* width: 100px; 
+    height: 60px; 
+    Bu yöntem ile elle yazacağımıza otomatize olacak şekilde değişkenlerle yapmış bulunuyoruz. */
+}
+
+.hamburger-menu .span,
+.span::before,
+.span::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: var(--height);
+    background-color: #222;
+}
+
+.hamburger-menu .span {
+    transform: translateY(var(--space));
+    transition: var(--animation-speed) var(--animation-speed) background-color;
+}
+
+.hamburger-menu .span::before {
+    position: absolute;
+    bottom: var(--space);
+    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) bottom;
+}
+
+.hamburger-menu .span::after {
+    position: absolute;
+    top: var(--space);
+    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) top;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked+.hamburger-menu .span {
+    background: transparent;
+    transition: var(--animation-speed) background-color;
+}
+
+#menu-toggle:checked+.hamburger-menu .span::before {
+    transform: rotate(45deg);
+    bottom: 0;
+    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom;
+
+}
+
+#menu-toggle:checked+.hamburger-menu .span::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top;
+}
